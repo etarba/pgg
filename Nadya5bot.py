@@ -11,78 +11,103 @@ from googletrans import Translator
 #==============================================================================#
 botStart = time.time()
 
-nadya = LINE()
-#nadya = LINE("TOKEN KAMU")
+#nadya = LINE()
+nadya = LINE("")
 #nadya = LINE("Email","Password")
 nadya.log("Auth Token : " + str(nadya.authToken))
 channelToken = nadya.getChannelResult()
 nadya.log("Channel Token : " + str(channelToken))
 
-ki = LINE()
-#ki = LINE("TOKEN KAMU")
+#ki = LINE()
+ki = LINE("")
 #ki = LINE("Email","Password")
 ki.log("Auth Token : " + str(ki.authToken))
 channelToken = ki.getChannelResult()
 ki.log("Channel Token : " + str(channelToken))
 
-ki2 = LINE()
-#ki2 = LINE("TOKEN KAMU")
+#ki2 = LINE()
+ki2 = LINE("")
 #ki2 = LINE("Email","Password")
 ki2.log("Auth Token : " + str(ki2.authToken))
 channelToken = ki2.getChannelResult()
 ki2.log("Channel Token : " + str(channelToken))
 
-ki3 = LINE()
-#ki3 = LINE("TOKEN KAMU")
+#ki3 = LINE()
+ki3 = LINE("")
 #ki3 = LINE("Email","Password")
 ki3.log("Auth Token : " + str(ki3.authToken))
 channelToken = ki3.getChannelResult()
 ki3.log("Channel Token : " + str(channelToken))
 
-ki4 = LINE()
-#ki4 = LINE("TOKEN KAMU")
+#ki4 = LINE()
+ki4 = LINE("")
 #ki4 = LINE("Email","Password")
 ki4.log("Auth Token : " + str(ki4.authToken))
 channelToken = ki4.getChannelResult()
 ki4.log("Channel Token : " + str(channelToken))
 
+#ki4 = LINE()
+ki5 = LINE("")
+#ki4 = LINE("Email","Password")
+ki5.log("Auth Token : " + str(ki5.authToken))
+channelToken = ki5.getChannelResult()
+ki5.log("Channel Token : " + str(channelToken))
 
-KAC = [nadya,ki,ki2,ki3,ki4]
+#ki4 = LINE()
+ki6 = LINE("")
+#ki4 = LINE("Email","Password")
+ki6.log("Auth Token : " + str(ki6.authToken))
+channelToken = ki6.getChannelResult()
+ki6.log("Channel Token : " + str(channelToken))
+
+
+
+
+KAC = [nadya,ki,ki2,ki3,ki4,ki5,ki6]
 
 nadyaMID = nadya.profile.mid
 kiMID = ki.profile.mid
 ki2MID = ki2.profile.mid
 ki3MID = ki3.profile.mid
 ki4MID = ki4.profile.mid
-
-Bots = [nadyaMID,kiMID,ki2MID,ki3MID,ki4MID]
-creator = ["u14f64e139a3817afaabe27d237afb36b","u92e4326146a0bf296ca15846aa2a25f6"]
-Owner = ["u14f64e139a3817afaabe27d237afb36b"]
-admin = ["u14f64e139a3817afaabe27d237afb36b"]
+ki5MID = ki5.profile.mid
+ki6MID = ki6.profile.mid
+Bots = [nadyaMID,kiMID,ki2MID,ki3MID,ki4MID,ki5MID,ki6MID]
+creator = ["u67acbba40f5d7983bd60c200e92456e9"]
+Owner = ["u67acbba40f5d7983bd60c200e92456e9"]
+admin = ["u67acbba40f5d7983bd60c200e92456e9"]
 
 nadyaProfile = nadya.getProfile()
 kiProfile = ki.getProfile()
 ki2Profile = ki2.getProfile()
 ki3Profile = ki3.getProfile()
 ki4Profile = ki4.getProfile()
+ki5Profile = ki5.getProfile()
+ki6Profile = ki6.getProfile()
 
 lineSettings = nadya.getSettings()
 kiSettings = ki.getSettings()
 ki2Settings = ki2.getSettings()
 ki3Settings = ki3.getSettings()
 ki4Settings = ki4.getSettings()
+ki5Settings = ki5.getSettings()
+ki6Settings = ki6.getSettings()
 
 oepoll = OEPoll(nadya)
 oepoll1 = OEPoll(ki)
 oepoll2 = OEPoll(ki2)
 oepoll3 = OEPoll(ki3)
 oepoll4 = OEPoll(ki4)
+oepoll5 = OEPoll(ki5)
+oepoll6 = OEPoll(ki6)
 
 responsename = nadya.getProfile().displayName
 responsename2 = ki.getProfile().displayName
 responsename3 = ki2.getProfile().displayName
 responsename4 = ki3.getProfile().displayName
 responsename5 = ki4.getProfile().displayName
+responsename6 = ki5.getProfile().displayName
+responsename7 = ki6.getProfile().displayName
 #==============================================================================#
 
 
