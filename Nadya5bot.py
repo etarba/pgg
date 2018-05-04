@@ -512,7 +512,7 @@ def lineBot(op):
             c = Message(to=op.param1, text=None, contentType=13)
             c.contentMetadata={'mid':op.param2}
             nadya.sendMessage(c)
-            nadya.sendText(op.param1,"Hallo " + nadya.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\nBudayakan Cek Note\nDan Semoga Betah Disini ^_^")
+            nadya.sendText(op.param1,"hai kak " + nadya.getContact(op.param2).displayName + "\nselamat datang d ☞ " + str(ginfo.name) + " ☜" + "\nsemoga betah ya kak ^_^")
             nadya.sendImageWithURL(op.param1,image)
             d = Message(to=op.param1, text=None, contentType=7)
             d.contentMetadata={
@@ -598,7 +598,7 @@ def lineBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     nadya.sendMessage(to, str(helpMessage))
-                    nadya.sendContact(to, "u14f64e139a3817afaabe27d237afb36b")
+                    nadya.sendContact(to, "u67acbba40f5d7983bd60c200e92456e9")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
                     nadya.sendMessage(to, str(helpTextToSpeech))
@@ -621,25 +621,25 @@ def lineBot(op):
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    nadya.sendMessage(to, "Bot sudah berjalan selama {}".format(str(runtime)))
+                    nadya.sendMessage(to, "login bot selama {}".format(str(runtime)))
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u14f64e139a3817afaabe27d237afb36b"
+                        owner = "u67acbba40f5d7983bd60c200e92456e9"
                         creator = nadya.getContact(owner)
                         contact = nadya.getContact(nadyaMID)
                         grouplist = nadya.getGroupIdsJoined()
                         contactlist = nadya.getAllContactIds()
                         blockedlist = nadya.getBlockedContactIds()
                         ret_ = "╔══[ About Self ]"
-                        ret_ += "\n╠ Line : {}".format(contact.displayName)
-                        ret_ += "\n╠ Group : {}".format(str(len(grouplist)))
-                        ret_ += "\n╠ Friend : {}".format(str(len(contactlist)))
-                        ret_ += "\n╠ Blocked : {}".format(str(len(blockedlist)))
+                        ret_ += "\n╠ akun : {}".format(contact.displayName)
+                        ret_ += "\n╠ group : {}".format(str(len(grouplist)))
+                        ret_ += "\n╠ teman : {}".format(str(len(contactlist)))
+                        ret_ += "\n╠ Blokir : {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[ About Selfbot ]"
                         ret_ += "\n╠ Version : Premium"
                         ret_ += "\n╠ Creator : {}".format(creator.displayName)
-                        ret_ += "\n╚══[ Dilarang Remake Tanpa Ijin :P ]"
+                        ret_ += "\n╚══[ PHANTOM GHOST :P ]"
                         nadya.sendMessage(to, str(ret_))
                     except Exception as e:
                         nadya.sendMessage(msg.to, str(e))
@@ -714,10 +714,10 @@ def lineBot(op):
                             nadya.sendMessage(msg.to,"The Ownerlist is empty")
                         else:
                             nadya.sendMessage(msg.to,"Tunggu...")
-                            mc = "╔═══════════════\n╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥\n╠══✪〘 Owner List 〙✪═══\n"
+                            mc = "╔═══════════════\n╠PHANTOM GHOST\n╠══✪〘 Owner List 〙✪═══\n"
                             for mi_d in admin:
                                 mc += "╠✪ " +nadya.getContact(mi_d).displayName + "\n"
-                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~nad_nad. 〙\n╚═══════════════")
+                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~rian-rian. 〙\n╚═══════════════")
 #-------------------------------------------------------------------------------
                 elif msg.text.lower().startswith("adminadd "):
                     if msg._from in Owner:
@@ -765,10 +765,10 @@ def lineBot(op):
                             nadya.sendMessage(msg.to,"The Adminlist is empty")
                         else:
                             nadya.sendMessage(msg.to,"Tunggu...")
-                            mc = "╔═══════════════\n╠♥ ✿✿✿ NADYA_TJ ✿✿✿ ♥\n╠══✪〘 Admin List 〙✪═══\n"
+                            mc = "╔═══════════════\n╠PHANTOM GHOST\n╠══✪〘 Admin List 〙✪═══\n"
                             for mi_d in admin:
                                 mc += "╠✪ " +nadya.getContact(mi_d).displayName + "\n"
-                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~nad_nad. 〙\n╚═══════════════")
+                            nadya.sendMessage(msg.to,mc + "╠═══════════════\n╠✪〘 line.me/ti/p/~rian-rian. 〙\n╚═══════════════")
 #-------------------------------------------------------------------------------
                 elif text.lower() == 'protect on':
                     if msg._from in Owner:
@@ -955,7 +955,7 @@ def lineBot(op):
                     ki2.sendMessage(msg.to,responsename3)
                     ki3.sendMessage(msg.to,responsename4)
                     ki4.sendMessage(msg.to,responsename5)
-                    
+                    ki5.sendMessage(msg.to,responsename6)
                 elif msg.text.lower() == 'absen':
                     if msg._from in Owner:
                         nadya.sendContact(to, nadyaMID)
@@ -963,14 +963,14 @@ def lineBot(op):
                         ki2.sendContact(to, ki2MID)
                         ki3.sendContact(to, ki3MID)
                         ki4.sendContact(to, ki4MID)
-                        
+                        ki5.sendContact(to, ki5MID)
                 elif text.lower() in ["byeall"]:
                   if msg._from in Owner:    
                     ki.leaveGroup(msg.to)
                     ki2.leaveGroup(msg.to)
                     ki3.leaveGroup(msg.to)
                     ki4.leaveGroup(msg.to)
-               
+                    ki5.leaveGroup(msg.to)      
                 elif text.lower() in ["joinall"]:
                   if msg._from in Owner:    
                     G = nadya.getGroup(msg.to)
